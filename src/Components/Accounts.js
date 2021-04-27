@@ -14,7 +14,8 @@ const Accounts = (props) => {
       <div className={`account-title ${color}`}>
         <h2>{props.name}</h2>
         <div>
-          <h3>{props.balance}</h3> <span>€</span>
+          <h3>{Number(props.balance).toLocaleString("fr-FR")}</h3>{" "}
+          <span>€</span>
         </div>
       </div>
       <div>
@@ -24,7 +25,10 @@ const Accounts = (props) => {
               key={index}
               date={elem.date}
               description={elem.description}
-              amount={Number(elem.amount)}
+              amount={Number(elem.amount).toLocaleString("fr-FR", {
+                style: "currency",
+                currency: "EUR",
+              })}
             />
           );
         })}

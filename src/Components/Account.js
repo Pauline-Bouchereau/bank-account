@@ -5,9 +5,7 @@ const Account = (props) => {
         <p>{props.date} </p>
         <p>{props.description} </p>
       </div>
-      <p>
-        {props.amount} <span>€</span>{" "}
-      </p>
+      <p>{props.amount} </p>
     </div>
   );
 };
