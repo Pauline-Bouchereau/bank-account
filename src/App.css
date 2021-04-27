@@ -1,1 +1,193 @@
-/* Other rules */
+/* Global Rules */
+:root {
+  --header-grey: #263438;
+  --blue: #1b75d1;
+  --pink: #c21a5a;
+  --light-grey: #f7f7f7;
+  --background-grey: #ebeff1;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Martel", Georgia, "Times New Roman", Times, serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+h2,
+h3 {
+  color: white;
+  font-size: 30px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+/* Header */
+
+header {
+  height: 120px;
+  background-color: var(--header-grey);
+}
+
+header > div {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 60px;
+}
+
+.right-side-header {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.right-side-header > p {
+  font-size: 30px;
+}
+
+.right-side-header > div {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.right-side-header svg {
+  height: 45px;
+  color: var(--header-grey);
+}
+
+/* Accounts */
+
+main {
+  background-color: var(--background-grey);
+  padding: 20px 0;
+}
+
+main .container {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+main > div:first-child {
+  margin-bottom: 60px;
+}
+
+.account-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  height: 50px;
+  padding: 10px 20px;
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.pink {
+  background-color: var(--pink);
+}
+
+.account-title > div {
+  display: flex;
+  align-items: center;
+}
+
+.account-title > div > span {
+  color: white;
+  opacity: 0.5;
+  font-size: 30px;
+  margin-left: 8px;
+}
+
+button {
+  height: 30px;
+  width: 120px;
+  padding: 10px;
+  background-color: var(--light-grey);
+  color: var(--header-grey);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 2.5%;
+}
+
+button:hover {
+  font-weight: bold;
+}
+
+.transaction {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 35px;
+  padding: 0 20px;
+}
+
+.transaction:nth-child(even) {
+  background-color: var(--light-grey);
+}
+
+.transaction:nth-child(odd) {
+  background-color: white;
+}
+
+.transaction:last-child {
+  margin-bottom: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.transaction > div {
+  display: flex;
+}
+
+.transaction > div > p:first-child {
+  margin-right: 40px;
+  color: var(--header-grey);
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer a:hover:first-child {
+  color: var(--pink);
+}
+
+footer a:hover:last-child {
+  color: var(--blue);
+}
